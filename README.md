@@ -5,8 +5,19 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Freelanced website for personal trainer Andrew Tudders.
 </h1>
+
+<h2>Tech used:</h2>
+<ul>
+  <li>Gatsby</li>
+  <li>React</li>
+  <li>Html</li>
+  <li>Css</li>
+  <li>Sass</li>
+  <li>Git - version control</li>
+  <li>Bootstrap</li>
+</ul>
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
