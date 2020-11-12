@@ -53,9 +53,15 @@
       letter-spacing: 1.4px;
       padding: 0.8rem 0;
     }
-    a {
-      @include small-button($color-white);
-    }
+  }
+}
+
+.touchButton {
+  @include small-button($color-white);
+  color: #000 !important;
+  a {
+    position: relative;
+    left: 10px;
   }
 }
 
@@ -105,12 +111,131 @@
 
 .stepsContainer {
   height: 131em;
-  //   border: 1px solid white;
   width: 100%;
 }
 
 .consultationForm {
+  @include flex-custom(row, center, center);
+  margin-top: 1rem;
   height: 50em;
   width: 100%;
-  //   border: 1px solid white;
+}
+
+.formContainer {
+  @include flex-custom(column, center, center);
+  height: 35em;
+  width: 700px;
+  color: $color-white;
+  h3 span {
+    color: $color-blue;
+  }
+  form {
+    @include flex-custom(column, center, flex-start);
+    height: 25em;
+    width: 100%;
+    button {
+      border: none;
+      outline: none;
+      height: 60px;
+      width: 100%;
+      position: relative;
+      top: 2rem;
+      text-transform: uppercase;
+      background-color: $color-blue;
+      color: $color-white;
+    }
+    button:hover {
+      background-color: $color-hover;
+    }
+    label {
+      float: left;
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      span {
+        color: $color-blue;
+      }
+    }
+    input {
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      height: 60px;
+      width: 100%;
+      margin: 0.8rem 0;
+    }
+  }
+  h5,
+  h4,
+  h3 {
+    text-transform: uppercase;
+  }
+  section {
+    @include flex-custom(column, center, center);
+    position: relative;
+    height: 90px;
+    width: 400px;
+    h5 {
+      position: absolute !important;
+      bottom: 0 !important;
+      font-size: 96px;
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      color: #ffffff25;
+    }
+    h4 {
+      position: absolute !important;
+      bottom: 20px;
+      font-size: 24px;
+      font-weight: 300;
+      color: $color-blue;
+    }
+  }
+  h3 {
+    padding-top: 0rem;
+    font-weight: 400;
+    font-size: 36px;
+    max-width: 75% !important;
+  }
+}
+
+.success {
+  background-color: #4bb543 !important;
+}
+
+.failure {
+  background-color: #c9150a !important;
+}
+
+.testimonial {
+  height: 55em;
+  width: 100%;
+  background-image: url("../../../src/images/imgFour.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.carouselItem {
+  @include flex-custom(column, center, center);
+  height: 55em;
+  width: 100%;
+  color: $color-white;
+  a {
+    font-size: 2rem;
+  }
+  p {
+    margin: 2rem 0rem;
+    max-width: 900px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+  }
 }

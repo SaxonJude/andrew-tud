@@ -1,6 +1,7 @@
 $background-color: #111111;
 $color-white: #fff;
 $color-blue: #009fa3;
+$color-hover: #008c91;
 
 @mixin flex-custom($direction, $justify, $align) {
   display: flex;

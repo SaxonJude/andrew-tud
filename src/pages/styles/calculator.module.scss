@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+
+.calcContainer {
+  @include flex-custom(column, center, center);
+  height: 85em;
+  width: 100%;
+  //   border: 1px solid white;
+  color: $color-white;
+  text-transform: uppercase !important;
+}
+
+.calcForm {
+  @include flex-custom(column, space-evenly, flex-start);
+  height: 75em;
+  width: 40em;
+  //   border: 1px solid white;
+  h1 {
+    letter-spacing: 5px;
+    font-weight: 700;
+    font-size: 26px;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $color-white;
+  }
+  h2 {
+    font-size: 18px;
+    span {
+      color: $color-blue;
+    }
+  }
+  form {
+    @include flex-custom(column, center, flex-start);
+    // border: 1px solid blue;
+    width: 100%;
+    position: relative;
+    label {
+      font-weight: 300;
+      margin: 0.5rem 0 !important;
+      height: 25px;
+      span {
+        color: $color-blue;
+      }
+    }
+    input {
+      height: 50px !important;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      padding-left: 1rem !important;
+    }
+    input::placeholder {
+      font-size: 14px;
+    }
+    p {
+      @include flex-custom(row, center, center);
+      height: 50px !important;
+      width: 100%;
+      background-color: $color-blue;
+      color: $color-white;
+      border: none;
+      outline: none;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.halfButton,
+.fullButton,
+.doubleButton {
+  height: 50px !important;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.fullButton {
+  @include flex-custom(row, flex-start, center);
+  margin: 0.5rem 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 1rem;
+  background-color: white;
+  span {
+    padding-left: 0.5rem;
+    font-weight: 300;
+  }
+}
+
+.halfButton {
+  @include flex-custom(row, center, center);
+  font-weight: 600;
+  width: 49%;
+  //   border: 1px solid green;
+  background-color: white;
+}
+
+.kiloInput {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.doubleButton {
+  @include flex-custom(row, space-between, center);
+  //   border: 1px solid white;
+  width: 100%;
+  input {
+    width: 49% !important;
+  }
+}

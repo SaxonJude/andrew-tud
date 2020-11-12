@@ -2,7 +2,7 @@
 @import "../../styles/variables";
 
 .navContainer {
-  @include flex-custom(row, space-between, center);
+  @include flex-custom(row, space-between !important, center);
   height: 120px;
   width: 100%;
 }
@@ -22,5 +22,12 @@
     padding: 0 0.2rem;
     margin: 0 20px;
   }
+  a:hover {
+    color: $color-blue !important;
+  }
   margin-right: 5rem;
+}
+
+.active {
+  color: $color-blue !important;
 }

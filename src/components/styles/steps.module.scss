@@ -9,14 +9,12 @@
 }
 
 .container {
-  //   border: 1px solid white;
   height: 700px;
   width: 100%;
 }
 
 .stepLeft {
   float: left;
-  //   border: 1px solid white;
   height: inherit;
   width: 50%;
   img {
@@ -29,7 +27,6 @@
 .stepRight {
   @include flex-custom(column, center, center);
   position: relative;
-  //   border: 1px solid white;
   height: 100%;
   width: 50%;
   color: $color-white;

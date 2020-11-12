@@ -5,15 +5,22 @@ import Steps from '../components/Steps';
 import Layout from '../components/Layout';
 import indexStyles from './styles/index.module.scss';
 import imgOne from '../images/imgOne.jpg';
+import imgTwo from '../images/imgTwo.jpeg';
+import imgThree from '../images/imgThree.jpeg';
 
 import '../utils/fontawesome';
 import ButtonLink from '../components/Button';
 
-const Home = () => {
+import { Carousel } from 'react-bootstrap';
+
+const Home = props => {
     const [formState, setFormState] = useState({
         name: "",
-        email: ""
-    })
+        email: "",
+        message: ""
+    });
+    const [ success, setSuccess ] = useState(false);
+    const [ failure, setFailure ] = useState(false);
 
     const handleChange = e => {
         setFormState({
@@ -34,26 +41,30 @@ const Home = () => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...formState })
           })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .then(() => setSuccess(true))
+            .catch(error => {
+                alert('Something went wrong submitting the form :(')
+                console.log(error);
+                setFailure(true);
+            });
     
           e.preventDefault();
     }
 
   return (
     <div>
-        <Layout>
+        <Layout tab="home">
             <div className={indexStyles.container}>
                 <div className={indexStyles.landingBoxes}>
                     <div className={indexStyles.left}>
                         <section>
                             <h1>Hello<span>,</span> i'm <span>Andrew Tudders</span> </h1>
                             <h2>Personal Trainer & fitness coach </h2>
-                            <a>Get In Touch</a>
+                            <a onClick={() => {console.log(props.location.pathname)}} className={indexStyles.touchButton}>Get In Touch <ButtonLink icon={'angle-down'} /></a>
                         </section>
                     </div>
                     <div className={indexStyles.right}>
-                        <img src={imgOne} alt="Picture Of Andrew"/>
+                        <img src={imgOne} alt="Andrew"/>
                     </div>
                 </div>
                 <h3>Andrew</h3>
@@ -82,6 +93,7 @@ const Home = () => {
                     content2="​Since becoming a Personal Trainer over 8 years ago my goal is to educate and change the lives of people wanting to lead a healthier, fitter lifestyle."
                     content3="As the name suggests my training is Bespoke, Effective and Next level."
                     button="About Me"
+                    url="/about"
                 />
                 <Steps 
                     img="map"  
@@ -94,6 +106,7 @@ const Home = () => {
                     restrictions are lifted."
                     content3=""
                     button="Directions"
+                    gym="puregym"
                 />
                 <Steps 
                     img="imgThree" 
@@ -105,17 +118,56 @@ const Home = () => {
                     content2="​Try out this quick 1 minute calculator to calculate yourdaily caloric needs."
                     content3=""
                     button="Take Me There"
+                    url="/calculator"
                 />
             </div>
             <div className={indexStyles.consultationForm}>
-                <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact" />
-                    <label htmlFor="name">Name *</label>
-                    <input id="name" name="name" type="text" onChange={handleChange} value={formState.name} placeholder="Name..."/>
-                    <label htmlFor="email">Name *</label>
-                    <input id="email" name="email" type="email" onChange={handleChange} value={formState.email} placeholder="Email..."/>
-                    <button type="submit">Submit</button>
-                </form>
+                <div className={indexStyles.formContainer}>
+                    <section>
+                        <h5>04</h5>
+                        <h4>Let's Talk!</h4>
+                    </section>
+                    <h3>GET IN TOUCH FOR A <span>FREE</span> 40 MINUTE CONSULTATION.</h3>
+
+                    <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <label htmlFor="name">Name <span>*</span></label>
+                        <input id="name" name="name" type="text" onChange={handleChange} value={formState.name} />
+                        <label htmlFor="email">Email <span>*</span></label>
+                        <input id="email" name="email" type="email" onChange={handleChange} value={formState.email} />
+                        <label htmlFor="message">Message <span>*</span></label>
+                        <input id="message" name="message" type="text" onChange={handleChange} value={formState.message} />
+                        <button className={success && !failure ? indexStyles.success : ''} type="submit">{success && !failure ? 'Submitted!' : 'Submit'}</button>
+                    </form>
+                </div>
+            </div>
+            <div className={indexStyles.testimonial}>
+                <Carousel>
+                    <Carousel.Item>
+                        <div className={indexStyles.carouselItem}>
+                            <ButtonLink icon={'quote-left'} />
+                            <p>The session was made really fun by Andrew teaching me new 
+                                exercises which i would never have had the confidence 
+                                to do on my own. After only a few sessions my fitness 
+                                level had improved. I would definitely recommend 
+                                him to a friend!</p>
+                            <h4>MOLLY NIPPER, Bournemouth</h4>
+                        </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                    <div className={indexStyles.carouselItem}>
+                            <ButtonLink icon={'quote-left'} />
+                            <p>Andrew is very professional and helpful. I felt extremely comfortable and he made me feel at ease. Great trainer with a lot of great resources.</p>
+                            <h4>Alistair Standard, Bournemouth</h4>
+                        </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                    <div className={indexStyles.carouselItem}>
+                            <ButtonLink icon={'quote-left'} />
+                            <p>I done personal training with Andrew for a couple of months. I have to say I found him great to motivate and help me achieve some of the results I wanted. I really enjoyed my workouts and felt great while I’ve as doing it. Unfortunately I had to leave due to some personal circumstances. But I would highly recommend Andrew as a personal trainer. Thanks for all ur help Andrew.</p>
+                            <h4>Craig Hooper, Bournemouth</h4>
+                        </div>
+                    </Carousel.Item>
+                    </Carousel>
             </div>
         </Layout>
     </div>
