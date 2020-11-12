@@ -1,0 +1,26 @@
+@import url("https://fonts.cdnfonts.com/css/monument-extended");
+@import "../../styles/variables";
+
+.navContainer {
+  @include flex-custom(row, space-between, center);
+  height: 120px;
+  width: 100%;
+}
+
+.logo {
+  width: 200px;
+  margin-left: 5rem;
+}
+
+.navLinks {
+  a {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 15px !important;
+    text-decoration: none;
+    padding: 0 0.2rem;
+    margin: 0 20px;
+  }
+  margin-right: 5rem;
+}

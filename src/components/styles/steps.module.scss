@@ -1,0 +1,95 @@
+@import "../../styles/variables";
+
+.flexboxRowReverse {
+  @include flex-custom(row-reverse, center, center);
+}
+
+.flexboxRow {
+  @include flex-custom(row, center, center);
+}
+
+.container {
+  //   border: 1px solid white;
+  height: 700px;
+  width: 100%;
+}
+
+.stepLeft {
+  float: left;
+  //   border: 1px solid white;
+  height: inherit;
+  width: 50%;
+  img {
+    height: 700px !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+}
+
+.stepRight {
+  @include flex-custom(column, center, center);
+  position: relative;
+  //   border: 1px solid white;
+  height: 100%;
+  width: 50%;
+  color: $color-white;
+  h5,
+  h4,
+  h3 {
+    text-transform: uppercase;
+  }
+  section {
+    position: relative;
+    height: 90px;
+    width: 400px;
+    h5 {
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 0;
+      font-size: 96px;
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      color: #ffffff25;
+    }
+    h4 {
+      position: absolute !important;
+      bottom: 20px;
+      font-size: 24px;
+      font-weight: 300;
+      color: $color-blue;
+    }
+  }
+  h3 {
+    padding-top: 0rem;
+    font-weight: 400;
+    font-size: 36px;
+    max-width: 450px !important;
+  }
+  p {
+    text-align: left;
+    font-weight: 300;
+    max-width: 430px;
+    font-size: 18px;
+  }
+}
+
+.rightBox {
+  @include flex-custom(column, custom, flex-start);
+  div {
+    padding: 1rem 0;
+  }
+}
+
+.smallButton {
+  @include small-button($color-blue);
+  color: $color-white !important;
+  text-transform: uppercase;
+  outline: none !important;
+  border: none;
+  a {
+    font-size: 1rem !important;
+    position: relative;
+    left: 10px;
+  }
+}

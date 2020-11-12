@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.footer {
+  font-size: 16px;
+  background-color: $background-color;
+  color: $color-white;
+  margin: 0 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3rem;
+  a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+  }
+  //   i {
+  //     padding: 0 0.5rem;
+  //     float: right !important;
+  //     color: #fff;
+  //     font-size: 2rem;
+  //   }
+}

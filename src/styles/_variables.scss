@@ -1,0 +1,17 @@
+$background-color: #111111;
+$color-white: #fff;
+$color-blue: #009fa3;
+
+@mixin flex-custom($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin small-button($color) {
+  background-color: $color !important;
+  color: transparent;
+  font-weight: 600;
+  padding: 10px 30px;
+}
