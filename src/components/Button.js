@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const ButtonLink = props => (
-    <Link to={props.url}>
+    <span>
       {props.text ? props.text : null} <FontAwesomeIcon icon={props.icon} />
-    </Link>
+    </span>
 );
 
 export default ButtonLink;

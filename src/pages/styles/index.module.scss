@@ -1,6 +1,7 @@
 @import "../../styles/variables";
+@import "../../components/styles/media";
 
-.container {
+.landingContainer {
   @include flex-custom(column, center, center);
   height: 50em;
   width: 100%;
@@ -65,6 +66,12 @@
   }
 }
 
+.touchButton:hover {
+  color: $color-white !important;
+  background-color: transparent !important;
+  border: 1px solid $color-white;
+}
+
 .right {
   img {
     width: 480px;
@@ -76,7 +83,7 @@
   @include flex-custom(column, center, center);
   height: 750px;
   width: 100%;
-  button {
+  a:first-of-type {
     font-size: 13px;
     text-transform: uppercase;
     outline: none;
@@ -160,6 +167,7 @@
       border: none;
       border-radius: 5px;
       outline: none;
+      padding-left: 1rem;
       height: 60px;
       width: 100%;
       margin: 0.8rem 0;

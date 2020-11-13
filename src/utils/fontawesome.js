@@ -10,7 +10,8 @@ import { faCoffee,
     faHeartbeat,
     faBalanceScaleLeft,
     faArrowRight,
-    faQuoteLeft
+    faQuoteLeft,
+    faBars
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faCoffee, 
@@ -24,5 +25,6 @@ library.add(faCoffee,
     faHeartbeat,
     faBalanceScaleLeft,
     faArrowRight,
-    faQuoteLeft
+    faQuoteLeft,
+    faBars
 );

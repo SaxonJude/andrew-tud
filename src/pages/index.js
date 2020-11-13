@@ -5,8 +5,6 @@ import Steps from '../components/Steps';
 import Layout from '../components/Layout';
 import indexStyles from './styles/index.module.scss';
 import imgOne from '../images/imgOne.jpg';
-import imgTwo from '../images/imgTwo.jpeg';
-import imgThree from '../images/imgThree.jpeg';
 
 import '../utils/fontawesome';
 import ButtonLink from '../components/Button';
@@ -54,13 +52,13 @@ const Home = props => {
   return (
     <div>
         <Layout tab="home">
-            <div className={indexStyles.container}>
-                <div className={indexStyles.landingBoxes}>
+            <div className={indexStyles.landingContainer}>
+                <div id='top_of_index' className={indexStyles.landingBoxes}>
                     <div className={indexStyles.left}>
                         <section>
                             <h1>Hello<span>,</span> i'm <span>Andrew Tudders</span> </h1>
                             <h2>Personal Trainer & fitness coach </h2>
-                            <a onClick={() => {console.log(props.location.pathname)}} className={indexStyles.touchButton}>Get In Touch <ButtonLink icon={'angle-down'} /></a>
+                            <a href='#contact_form' onClick={() => {console.log(props.location.pathname)}} className={indexStyles.touchButton}>Get In Touch <ButtonLink icon={'angle-down'} /></a>
                         </section>
                     </div>
                     <div className={indexStyles.right}>
@@ -80,9 +78,9 @@ const Home = props => {
                     <IconCard title="Quality Sleep" icon="battery-full" />
                     <IconCard title="Results" icon="heartbeat" />
                 </div>
-                <button>Let's Talk <ButtonLink icon={'arrow-right'} /></button>
+                <a href='#contact_form'>Let's Talk <ButtonLink icon={'arrow-right'} /></a>
             </div>
-            <div className={indexStyles.stepsContainer}>
+            <div id='services_section' className={indexStyles.stepsContainer}>
                 <Steps 
                     img="imgTwo" 
                     row="row-reverse" 
@@ -94,6 +92,7 @@ const Home = props => {
                     content3="As the name suggests my training is Bespoke, Effective and Next level."
                     button="About Me"
                     url="/about"
+                    step1='true'
                 />
                 <Steps 
                     img="map"  
@@ -121,7 +120,7 @@ const Home = props => {
                     url="/calculator"
                 />
             </div>
-            <div className={indexStyles.consultationForm}>
+            <div id='contact_form' className={indexStyles.consultationForm}>
                 <div className={indexStyles.formContainer}>
                     <section>
                         <h5>04</h5>
@@ -145,7 +144,7 @@ const Home = props => {
                     <Carousel.Item>
                         <div className={indexStyles.carouselItem}>
                             <ButtonLink icon={'quote-left'} />
-                            <p>The session was made really fun by Andrew teaching me new 
+                            <p className={indexStyles.reviewP} >The session was made really fun by Andrew teaching me new 
                                 exercises which i would never have had the confidence 
                                 to do on my own. After only a few sessions my fitness 
                                 level had improved. I would definitely recommend 
@@ -156,14 +155,14 @@ const Home = props => {
                     <Carousel.Item>
                     <div className={indexStyles.carouselItem}>
                             <ButtonLink icon={'quote-left'} />
-                            <p>Andrew is very professional and helpful. I felt extremely comfortable and he made me feel at ease. Great trainer with a lot of great resources.</p>
+                            <p className={indexStyles.reviewP}>Andrew is very professional and helpful. I felt extremely comfortable and he made me feel at ease. Great trainer with a lot of great resources.</p>
                             <h4>Alistair Standard, Bournemouth</h4>
                         </div>
                     </Carousel.Item>
                     <Carousel.Item>
                     <div className={indexStyles.carouselItem}>
                             <ButtonLink icon={'quote-left'} />
-                            <p>I done personal training with Andrew for a couple of months. I have to say I found him great to motivate and help me achieve some of the results I wanted. I really enjoyed my workouts and felt great while I’ve as doing it. Unfortunately I had to leave due to some personal circumstances. But I would highly recommend Andrew as a personal trainer. Thanks for all ur help Andrew.</p>
+                            <p className={indexStyles.reviewP}>I done personal training with Andrew for a couple of months. I have to say I found him great to motivate and help me achieve some of the results I wanted. I really enjoyed my workouts and felt great while I’ve as doing it. Unfortunately I had to leave due to some personal circumstances. But I would highly recommend Andrew as a personal trainer. Thanks for all ur help Andrew.</p>
                             <h4>Craig Hooper, Bournemouth</h4>
                         </div>
                     </Carousel.Item>

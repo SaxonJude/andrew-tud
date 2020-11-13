@@ -1,0 +1,272 @@
+@media screen and (min-width: 1500px) {
+}
+
+@media screen and (max-width: 1500px) {
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .betterTitle {
+    width: 650px !important;
+    h2 {
+      font-size: 30px !important;
+    }
+    h3 {
+      font-size: 16px !important;
+    }
+  }
+  .cards {
+    width: 1000px !important;
+    margin: 4rem 0 !important;
+    .card {
+      font-size: 2rem;
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .stepRight {
+    .rightBox {
+      section h5 {
+        font-size: 80px;
+      }
+      section h4 {
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+        max-width: 350px;
+      }
+    }
+  }
+  .aboutRight {
+    section h5 {
+      font-size: 75px !important;
+    }
+    section h4 {
+      font-size: 22px !important;
+    }
+    h3 {
+      font-size: 28px !important;
+    }
+    p {
+      font-size: 16px !important;
+      max-width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cards {
+    flex-wrap: wrap;
+    width: 600px !important;
+    height: 400px !important;
+    margin: 1rem 0 !important;
+  }
+  .aboutLeft {
+    width: 29.5em !important;
+  }
+  .aboutRight {
+    width: 22.5em !important;
+  }
+  .landingBoxes {
+    width: 740px !important;
+  }
+  .left {
+    width: 330px !important;
+    h1 {
+      font-size: 50px !important;
+    }
+    h2 {
+      font-size: 11px !important;
+    }
+    section {
+      width: 270px !important;
+    }
+  }
+  .right img {
+    width: 410px !important;
+    height: 650px !important;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .stepsContainer {
+    height: 238em !important;
+  }
+  .container {
+    // border: 1px solid white;
+    height: 80em !important;
+  }
+  .flexboxRowReverse {
+    flex-direction: column-reverse !important;
+  }
+  .flexboxRow {
+    flex-direction: column-reverse !important;
+  }
+  .stepLeft {
+    width: 100% !important;
+  }
+  .stepRight {
+    p {
+      text-align: center !important;
+    }
+    h5,
+    h4 {
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+    h4 {
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+  .rightBox {
+    align-items: center !important;
+  }
+  .reviewP {
+    max-width: 600px !important;
+    font-size: 14px !important;
+  }
+  .rightBox h3 {
+    text-align: center !important;
+  }
+  .aboutContainer {
+    height: 105em !important;
+  }
+  .aboutCard {
+    flex-direction: column-reverse !important;
+    justify-content: space-between !important;
+    height: 100em !important;
+  }
+  .aboutLeft {
+    height: 80% !important;
+  }
+  .aboutRight {
+    height: 60% !important;
+    margin-bottom: 5rem !important;
+  }
+  .navLinks a {
+    display: none;
+  }
+  .hamburger {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .landingBoxes {
+    width: 100% !important;
+  }
+  .landingContainer {
+    height: 60em !important;
+  }
+  .landingBoxes {
+    flex-direction: column !important;
+    height: 65em !important;
+    justify-content: flex-start !important;
+  }
+  .reviewP {
+    font-size: 12px !important;
+    max-width: 350px !important;
+  }
+  .carouselItem h4 {
+    font-size: 12px !important;
+  }
+  .consultationForm {
+    height: 45em !important;
+    form {
+      height: 40em !important;
+    }
+  }
+  .formContainer {
+    width: 350px !important;
+    h3 {
+      max-width: 100% !important;
+      text-align: center !important;
+      font-size: 18px !important;
+    }
+    h5 {
+      font-size: 75px !important;
+    }
+    h4 {
+      font-size: 16px !important;
+    }
+  }
+  .footer {
+    * {
+      font-size: 10px !important;
+    }
+  }
+  .betterVersion {
+    height: 67em !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding: 5rem 0;
+    position: relative;
+    a {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .betterTitle {
+    width: 100% !important;
+    @include flex-custom(column, center, center);
+    h2 {
+      font-size: 18px !important;
+    }
+    h3 {
+      font-size: 12px !important;
+      max-width: 300px !important;
+      font-weight: 300;
+    }
+  }
+  .cards {
+    width: 100% !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    flex-wrap: nowrap !important;
+    img {
+      margin-left: 3rem !important;
+    }
+  }
+  .stepsContainer {
+    height: 228em !important;
+  }
+  .stepLeft img {
+    height: 500px !important;
+  }
+  .step1 {
+    img {
+      position: relative;
+      top: 5rem;
+    }
+    .stepRight {
+      top: 2rem !important;
+    }
+  }
+  .carouselItem {
+    height: 24em !important;
+  }
+  .testimonial {
+    height: 24em !important;
+  }
+  .footer {
+    * {
+      font-size: 8px !important;
+    }
+  }
+}

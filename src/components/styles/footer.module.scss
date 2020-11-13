@@ -1,17 +1,27 @@
 @import "../../styles/variables";
+@import "../styles/media";
 
 .footer {
-  font-size: 16px;
+  @include flex-custom(row, space-between, center);
+  * {
+    font-size: 14px;
+  }
   background-color: $background-color;
   color: $color-white;
   margin: 0 !important;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 3rem;
+  padding: 1.5rem;
+  p {
+    margin: 0 !important;
+  }
   a {
     color: inherit;
     font-family: inherit;
     text-decoration: none;
+  }
+  a:hover {
+    color: rgba(214, 214, 214, 0.678);
   }
   //   i {
   //     padding: 0 0.5rem;
