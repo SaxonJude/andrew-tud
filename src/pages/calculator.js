@@ -64,6 +64,7 @@ class Calculator extends Component {
         return (
             <Layout tab="calculator">
                 <div className={calculatorStyles.calcContainer}>
+                    <h3>CALCULATE</h3>
                     <div className={calculatorStyles.calcForm}>
                         <h1>
                             Daily Calorie Needs Calculator

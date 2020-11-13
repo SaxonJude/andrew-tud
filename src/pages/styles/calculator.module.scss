@@ -1,19 +1,29 @@
 @import "../../styles/variables";
+@import "../../../src/components/styles/media";
 
 .calcContainer {
   @include flex-custom(column, center, center);
   height: 70em;
   width: 100%;
-  //   border: 1px solid white;
   color: $color-white;
   text-transform: uppercase !important;
+  overflow: hidden;
+  h3 {
+    position: fixed;
+    top: 1em;
+    z-index: 0;
+    font-family: "Monument Extended";
+    text-transform: uppercase;
+    font-size: 20rem;
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgba(235, 235, 235, 0.733);
+  }
 }
 
 .calcForm {
   @include flex-custom(column, space-evenly, flex-start);
   height: 65em;
   width: 40em;
-  //   border: 1px solid white;
   h1 {
     letter-spacing: 5px;
     font-weight: 700;
@@ -29,7 +39,6 @@
   }
   form {
     @include flex-custom(column, center, flex-start);
-    // border: 1px solid blue;
     width: 100%;
     position: relative;
     label {
@@ -102,7 +111,6 @@
   @include flex-custom(row, center, center);
   font-weight: 600;
   width: 49%;
-  //   border: 1px solid green;
   background-color: white;
 }
 
@@ -113,7 +121,6 @@
 
 .doubleButton {
   @include flex-custom(row, space-between, center);
-  //   border: 1px solid white;
   width: 100%;
   input {
     width: 49% !important;

@@ -65,7 +65,7 @@ const Home = props => {
                         <img src={imgOne} alt="Andrew"/>
                     </div>
                 </div>
-                <h3>Andrew</h3>
+                <h3>Andrew tudders Andrew tudders Andrew tudders Andrew tudders Andrew tudders</h3>
             </div>
             <div className={indexStyles.betterVersion}>
                 <div className={indexStyles.betterTitle}>
