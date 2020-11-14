@@ -64,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 1000px) {
   .calcContainer {
     height: 50em !important;
   }
@@ -104,7 +104,7 @@
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-device-width: 860px) {
   .stepsContainer {
     height: 238em !important;
   }
@@ -167,7 +167,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-device-width: 700px) {
   .calcContainer {
     height: 30em !important;
   }
@@ -247,12 +247,17 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-device-width: 450px) {
   .navbar {
     flex-wrap: nowrap !important;
   }
   .logo {
     margin-left: 1rem;
+    width: 150px !important;
+  }
+  .right img {
+    width: 350px !important;
+    height: 525px !important;
   }
   .stepsContainer {
     height: 228em !important;

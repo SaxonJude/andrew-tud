@@ -44,13 +44,13 @@
       color: $color-white;
       font-size: 60px;
       margin: 0 !important;
-      font-weight: 600;
+      font-weight: 700;
       span:first-of-type {
         color: $color-blue;
       }
       span:last-of-type {
         color: transparent;
-        font-weight: 400;
+        font-weight: 500;
         -webkit-text-stroke: 0.5px $color-white;
       }
     }
