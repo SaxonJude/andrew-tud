@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import aboutStyles from './styles/about.module.scss';
 import imgOne from '../images/imgOne.jpg';
-import ButtonLink from '../components/Button';
 
 const About = () => {
     return (

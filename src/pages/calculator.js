@@ -89,7 +89,7 @@ class Calculator extends Component {
                             </div>
                             <label htmlFor="height">HEIGHT <span>*</span></label>
                             <div className={calculatorStyles.doubleButton}>
-                                <input type="text" name="height" id="height" placeholder="FEAT..."/>
+                                <input type="text" name="height" id="height" placeholder="FT..."/>
                                 <input type="text" name="height" id="height" placeholder="INCHES..."/>
                             </div>
                             <label htmlFor="weight">WEIGHT <span>*</span></label>

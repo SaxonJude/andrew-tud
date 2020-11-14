@@ -20,7 +20,6 @@ const imgFilter = img => {
 };
 
 const Steps = props => {
-
     return (
         <div className={`${stepsStyles.container} ${props.row === 'row-reverse' ? stepsStyles.flexboxRowReverse : stepsStyles.flexboxRow} ${props.step1 ? stepsStyles.step1 : ''}`}>
             <div className={stepsStyles.stepLeft}>
@@ -38,7 +37,7 @@ const Steps = props => {
                         <p>​{props.content2}</p> 
                         <p>{props.content3}</p>
                     </div>
-                    {props.gym === 'puregym' ? <a href="https://g.page/puregymbournemouth?share" target="_blank" className={stepsStyles.smallButton}>{props.button}  <ButtonLink icon={'arrow-right'} /></a> : <Link to={props.url}  className={stepsStyles.smallButton}>{props.button} <ButtonLink icon={'arrow-right'} /></Link>}
+                    {props.gym === 'puregym' ? <a href="https://g.page/puregymbournemouth?share" target="_blank" rel='noreferrer' className={stepsStyles.smallButton}>{props.button}  <ButtonLink icon={'arrow-right'} /></a> : <Link to={props.url}  className={stepsStyles.smallButton}>{props.button} <ButtonLink icon={'arrow-right'} /></Link>}
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import iconStyles from './styles/iconCard.module.scss';
 
