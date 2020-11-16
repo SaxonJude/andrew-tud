@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import aboutStyles from './styles/about.module.scss';
-import imgOne from '../images/imgOne.jpg';
+import imgOne from '../images/imgOne.jpg'
 
 const About = () => {
     return (
