@@ -73,10 +73,26 @@ const Home = props => {
                     <h3>Reaching your true potential is not just about a workout - a healthy lifestyle all round is what will get you to achieve your fitness goals and stick to them.</h3>
                 </div>
                 <div className={indexStyles.cards}>
-                    <IconCard title="Hard Work" icon="dumbbell" />
-                    <IconCard title="Healthy Nutrition Plan" icon="balance-scale-left" />
-                    <IconCard title="Quality Sleep" icon="battery-full" />
-                    <IconCard title="Results" icon="heartbeat" />
+                    <IconCard 
+                    title="Hard Work" 
+                    icon="dumbbell" 
+                    desc="Motivation comes from within. No-one can hand it to you, but no-one can take it away, either."
+                    />
+                    <IconCard 
+                    title="Healthy Nutrition Plan" 
+                    icon="balance-scale-left" 
+                    desc="Your diet is number 1. You can live in the gym, but if you don't eat clean you're wasting your time."
+                    />
+                    <IconCard 
+                    title="Quality Sleep" 
+                    icon="battery-full" 
+                    desc="Most Champions are built by punch the clock workouts rather than extraordinary efforts. Sleep is key."
+                    />
+                    <IconCard 
+                    title="Results" 
+                    icon="heartbeat" 
+                    desc="Exercise is king. Nutrition is Queen. Put them otgether & you've got a kingdom."
+                    />
                 </div>
                 <a href='#contact_form'>Let's Talk <ButtonLink icon={'arrow-right'} /></a>
             </div>

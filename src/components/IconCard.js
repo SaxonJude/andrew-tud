@@ -10,9 +10,7 @@ const IconCard = props => {
         <div className={iconStyles.card}>
             <span><ButtonLink icon={`${props.icon}`} /></span>
             <h3>{props.title}</h3>
-            <p>Maecenas tempus, tellus eget 
-condimentum rhoncus, sem quam 
-semper, sit amet adipisc.</p>
+            <p>{props.desc}</p>
         </div>
     );
 }
