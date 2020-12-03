@@ -91,7 +91,7 @@ const Home = props => {
                     <IconCard 
                     title="Results" 
                     icon="heartbeat" 
-                    desc="Exercise is king. Nutrition is Queen. Put them otgether & you've got a kingdom."
+                    desc="Exercise is king. Nutrition is Queen. Put them together & you've got a kingdom."
                     />
                 </div>
                 <a href='#contact_form'>Let's Talk <ButtonLink icon={'arrow-right'} /></a>
